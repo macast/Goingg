@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+
+<ScrollView
+    android:id="@+id/wid_explanation_dialog_scroll"
+    android:layout_width="wrap_content"
+	android:layout_height="@dimen/zerodip"
+    android:layout_weight="@string/dialogScrollWeight"
+    android:paddingTop="@dimen/tendp"
+    android:paddingLeft="@dimen/tendp"
+    android:paddingRight="@dimen/tendp">
+
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall" 
+    android:text="@string/hereswhywid" />
+</ScrollView>
+
+<Button
+    android:id="@+id/wid_expl_dialog_ok"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zerodip"
+    android:layout_weight="@string/dialogButtonsWeight"
+    android:textColor="@color/black"      
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:background="@drawable/button_selector_group"
+    android:text="@string/ok"
+    android:layout_marginTop="@dimen/fiftydp"/>
+    
+</LinearLayout>

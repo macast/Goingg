@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/weather_forecast_title"
+  		android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/weather_forecast_titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+	android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"
+		android:text="@string/weatherforecast"/>
+       </LinearLayout>  
+        <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+       
+ 
+  <ListView
+        android:layout_width="fill_parent"
+   		android:layout_height="@dimen/zerodip"
+  	    android:layout_weight="@string/dialogScrollWeight"
+        android:background="@color/blue"
+        android:id="@+id/weather_forecast_listview"
+        android:dividerHeight="@dimen/fivedp"
+        android:divider="@color/transparentwhite"
+        android:layout_marginTop="@dimen/twentydp"
+        android:padding="@dimen/twentydp">
+    </ListView>
+   <Button
+        android:id="@+id/weather_forecast_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogButtonsWeight"
+        android:textColor="@color/black"      
+           android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/button_selector_group"
+        android:text="@string/close"
+        android:layout_marginTop="@dimen/fiftydp"/>
+ 
+</LinearLayout>

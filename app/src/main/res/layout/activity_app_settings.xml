@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bitBusy.going.activity.ActivityAppSettings" >
+
+    <RelativeLayout
+        android:id="@+id/goingid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp"
+        android:background="@drawable/border_transparent"
+        android:layout_marginTop="@dimen/twentydp">
+	    <TextView
+	        android:id="@+id/settings_goingidprompt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/goingID"
+	        android:layout_marginLeft="@dimen/fivedp"
+	        android:layout_marginRight="@dimen/fivedp" 
+	        android:textStyle="bold"/>
+	    
+	     <Button
+	         android:id="@+id/settings_goingid_signin"
+	         android:layout_width="@dimen/hundreddp"
+	         android:layout_height="wrap_content"
+	         android:layout_alignLeft="@+id/settings_goingid_signout"
+	         android:layout_alignParentRight="true"
+	         android:layout_marginRight="@dimen/fivedp"
+	         android:background="@drawable/button_selector_group"
+	         android:text="@string/login"
+	         android:textAppearance="?android:attr/textAppearanceSmall"
+	         android:onClick="signInGoing" />
+	     
+	         <Button
+	             android:id="@+id/settings_goingid_signout"
+	             android:layout_width="@dimen/hundreddp"
+	             android:layout_height="wrap_content"
+	             android:layout_alignParentRight="true"
+	             android:layout_marginRight="@dimen/fivedp"
+	             android:background="@drawable/button_selector_group"
+	             android:text="@string/signout"
+	             android:textAppearance="?android:attr/textAppearanceSmall"
+	             android:onClick="signOutGoing" />
+
+	        <TextView
+	        android:id="@+id/settings_goingidvalue"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/fivedp"
+	        android:layout_below="@+id/settings_goingidprompt" />         
+         </RelativeLayout>
+        
+     <RelativeLayout
+        android:id="@+id/verificationid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp"
+        android:background="@drawable/border_transparent"
+        android:layout_marginTop="@dimen/twentydp"
+        android:layout_below="@+id/goingid_layout">
+	    <TextView
+	        android:id="@+id/settings_verificationidprompt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/verificationID"
+	        android:layout_marginLeft="@dimen/fivedp"
+	        android:layout_marginRight="@dimen/fivedp" 
+	        android:textStyle="bold"/>
+	    
+	     <Button
+	        android:id="@+id/settings_verificationid_signin"
+	        android:layout_width="@dimen/hundreddp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/login"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/fivedp"
+	        android:layout_toRightOf="@+id/settings_verificationidprompt"
+	        android:background="@drawable/button_selector_group"
+	        android:visibility="gone"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:onClick="signInGoogle"/>
+	        
+	         <Button
+	             android:id="@+id/settings_verificationid_signout"
+	             android:layout_width="@dimen/hundreddp"
+	             android:layout_height="wrap_content"
+	             android:layout_alignParentRight="true"
+	             android:layout_marginRight="@dimen/fivedp"
+	             android:background="@drawable/button_selector_group"
+	             android:text="@string/revokeAccess"
+	             android:textAppearance="?android:attr/textAppearanceSmall"
+	             android:onClick="revokeAccessGoogle" />
+	        
+	        <TextView
+	        android:id="@+id/settings_verificationidvalue"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/fivedp" 
+	        android:layout_below="@+id/settings_verificationidprompt"/>         
+         </RelativeLayout>
+        
+</RelativeLayout>

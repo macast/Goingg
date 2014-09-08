@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/add_friend_dialog_title">
+                
+       <TextView
+        android:id="@+id/add_friend_titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newcontact"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+    
+     </LinearLayout>
+ 
+     <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>
+       
+
+      <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"     
+        android:layout_weight="@string/dialogScrollWeight"  
+        android:id="@+id/add_friend_scroll">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_friend_relLayoutContent"
+            android:orientation="vertical">
+     
+ <EditText
+     android:id="@+id/add_friend_edittext"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:padding="@dimen/tendp"
+     android:hint="@string/entercontactgoingid"
+     android:textAppearance="?android:attr/textAppearanceSmall"/>
+ 
+  <EditText
+     android:id="@+id/add_friend_msg"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:padding="@dimen/tendp"
+     android:hint="@string/addmsg"
+     android:textAppearance="?android:attr/textAppearanceSmall"/>
+ 
+ <EditText
+     android:id="@+id/add_friend_fname"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:hint="@string/entercontactfname"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:visibility="gone"
+     android:layout_marginTop="@dimen/tendp"/>
+ 
+ <EditText
+     android:id="@+id/add_friend_lname"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:hint="@string/entercontactlname"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:visibility="gone"
+     android:layout_marginTop="@dimen/tendp"/>     
+ 
+ <EditText
+     android:id="@+id/add_friend_city"
+     android:layout_height="wrap_content"
+	 android:layout_width="fill_parent"
+     android:hint="@string/entercontactcity"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:visibility="gone"
+     android:layout_marginTop="@dimen/tendp"/>   
+ 
+</LinearLayout>
+</ScrollView>
+
+ <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+      		 android:layout_weight="@string/dialogButtonsWeight"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/add_friend_dialog_buttons"
+       		 android:layout_marginTop="@dimen/twentydp">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/add_friend_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/cancel"
+        android:layout_weight="1" />
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/add_friend_search"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/search"
+        android:layout_weight="1" />
+     
+         <Button
+        android:id="@+id/add_friend_add"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/add" 
+          android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle" />
+   
+        </LinearLayout>
+</LinearLayout>

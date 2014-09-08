@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/date_time_picker_title">
+        
+       <TextView
+        android:id="@+id/date_time_picker_titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dateTimePickerTitle"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+    
+     </LinearLayout>
+ 
+     <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+       
+
+      <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"     
+        android:layout_weight="@string/dialogScrollWeight"  
+        android:id="@+id/date_time_picker_scrollView">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_time_picker_relLayoutContent">
+    
+ <DatePicker
+        android:id="@+id/date_time_picker_datepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:spinnersShown="false"
+        android:layout_centerHorizontal="true"/>
+    
+ 
+ <TimePicker
+        android:id="@+id/date_time_picker_timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/date_time_picker_datepicker"
+        android:layout_centerHorizontal="true"/>
+ </RelativeLayout>
+    </ScrollView>
+ 
+      <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+      		 android:layout_weight="@string/dialogButtonsWeight"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/date_time_picker_dialog_buttons">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/date_time_picker_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/cancel"
+        android:layout_weight="1" 
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+         <Button
+        android:id="@+id/date_time_picker_set"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/set" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+        </LinearLayout>
+ 
+      
+ 
+</LinearLayout>

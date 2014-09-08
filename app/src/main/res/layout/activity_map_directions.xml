@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMapDirections" 
+    android:background="@color/white">
+
+   <fragment
+        android:id="@+id/activity_directions_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+   <RelativeLayout 
+       android:background="@drawable/border"
+       android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/tendp"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:padding="@dimen/fivedp"
+         android:layout_marginLeft="@dimen/fivedp"
+         android:id="@+id/activity_directions_map_header">
+         
+      <ImageButton
+        android:id="@+id/activity_directions_map_listViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list_small" 
+        android:onClick="displayList"
+        android:layout_marginRight="@dimen/tendp"
+        android:background="@drawable/button_selector_nocolor_color"/>
+      
+       <ImageButton
+        android:id="@+id/activity_directions_map_mapViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/map_small" 
+        android:onClick="displayMap"
+        android:layout_marginRight="@dimen/tendp"
+        android:background="@drawable/button_selector_nocolor_color"
+        android:visibility="invisible"/>
+      
+   
+   
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/activity_directions_details_linear_layout"
+		  android:layout_toRightOf="@+id/activity_directions_map_listViewButton">   
+		         
+         <TextView
+        android:id="@+id/activity_directions_distancePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance"
+        android:textColor="@color/darkSlateBlue"
+        android:layout_marginRight="@dimen/twodp"
+        android:textStyle="bold"/>
+        
+         <TextView
+        android:id="@+id/activity_directions_distanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkSlateBlue"
+        android:layout_toRightOf="@+id/activity_directions_distancePrompt"
+        android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"
+        android:textStyle="bold"/>
+          
+           <TextView
+        android:id="@+id/activity_directions_timePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textColor="@color/darkSlateBlue"
+		android:layout_below="@+id/activity_directions_distancePrompt"
+		android:layout_alignRight="@+id/activity_directions_distancePrompt"
+		android:layout_marginRight="@dimen/twodp"
+        android:textStyle="bold"/>
+          <TextView
+        android:id="@+id/activity_directions_timeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkSlateBlue"
+        android:layout_toRightOf="@+id/activity_directions_timePrompt"
+        android:layout_below="@+id/activity_directions_distanceValue"
+        android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"
+        android:textStyle="bold"/>
+     </RelativeLayout>
+        <ImageButton
+        android:id="@+id/activity_directions_map_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/activity_directions_details_linear_layout"
+        android:layout_marginRight="@dimen/fivedp"
+        android:src="@drawable/settings" 
+        android:onClick="showSettings"
+        android:background="@drawable/button_selector_nocolor_color"
+        android:layout_alignTop="@+id/activity_directions_map_listViewButton"
+        android:layout_alignBottom="@+id/activity_directions_map_listViewButton"
+        android:layout_marginLeft="@dimen/thirtydp"/>
+            </RelativeLayout>
+      
+      
+        <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_bkgrnd"
+        android:id="@+id/activity_directions_map_listDirs"
+          android:dividerHeight="@dimen/onedp"
+        android:divider="@color/transparentwhite"
+  	    android:layout_below="@+id/activity_directions_map_header"
+        android:layout_marginTop="@dimen/twentydp"
+        android:visibility="invisible"
+        android:padding="@dimen/twentydp">
+    </ListView>
+   
+   
+   
+   
+
+</RelativeLayout>

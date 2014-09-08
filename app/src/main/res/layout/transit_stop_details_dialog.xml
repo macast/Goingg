@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/transit_stop_details_title"
+  		android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/transit_stop_details_titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+	android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"
+		android:text="@string/transitstopdetails"/>
+       </LinearLayout>  
+       <View 
+   		android:layout_width="fill_parent"
+   			android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+  
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/transit_stop_details_scrollView">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/transit_stop_details_relLayoutContent">
+            	
+          <TextView
+        android:id="@+id/transit_stop_details_stopName"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/stopName"
+		android:layout_marginTop="@dimen/tendp"/>
+               
+     <TextView
+        android:id="@+id/transit_stop_details_stopName_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_details_stopName"
+		android:layout_toRightOf="@+id/transit_stop_details_stopName"/>            	
+            	
+        <TextView
+        android:id="@+id/transit_stop_details_arrivesDepartsPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignRight="@+id/transit_stop_details_stopName"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/transit_stop_details_stopName_value"/>
+ 
+        <TextView
+        android:id="@+id/transit_stop_details_arrivesDepartsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+        android:layout_marginTop="@dimen/tendp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_details_arrivesDepartsPrompt"
+		android:layout_toRightOf="@+id/transit_stop_details_arrivesDepartsPrompt"
+		android:layout_below="@+id/transit_stop_details_stopName_value"
+		android:layout_alignLeft="@+id/transit_stop_details_stopName_value"/>
+		        
+         <TextView
+        android:id="@+id/transit_stop_details_num_stops_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/tendp"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/transit_stop_details_stopName"
+		android:layout_below="@+id/transit_stop_details_arrivesDepartsValue"
+		android:visibility="gone"
+		android:text="@string/numStops"/>
+ 
+        <TextView
+        android:id="@+id/transit_stop_details_num_stops_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_details_num_stops_prompt"
+		android:layout_toRightOf="@+id/transit_stop_details_num_stops_prompt"
+		android:layout_below="@+id/transit_stop_details_arrivesDepartsValue"
+        android:layout_marginTop="@dimen/tendp"		
+		android:visibility="gone"/>
+
+          <TextView
+        android:id="@+id/transit_stop_details_lineurl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/info"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/transit_stop_details_num_stops_prompt"
+		android:layout_below="@+id/transit_stop_details_num_stops_value"/>
+     
+       <TextView
+        android:id="@+id/transit_stop_details_line_url_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+        android:layout_marginTop="@dimen/tendp"
+		android:layout_alignBottom="@+id/transit_stop_details_lineurl"
+		android:layout_toRightOf="@+id/transit_stop_details_lineurl"
+		android:layout_below="@+id/transit_stop_details_num_stops_value"/>
+     
+         <TextView
+        android:id="@+id/transit_stop_details_transitAgencyPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/transitAgency"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/transit_stop_details_line_url_value"
+		android:layout_marginLeft="@dimen/tendp"/>
+       
+        <TextView
+        android:id="@+id/transit_stop_name_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/name"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/transit_stop_details_lineurl"
+		android:layout_below="@+id/transit_stop_details_transitAgencyPrompt"/>
+        
+          <TextView
+        android:id="@+id/transit_stop_agency_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tendp"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_name_prompt"
+		android:layout_toRightOf="@+id/transit_stop_name_prompt"
+		android:layout_below="@+id/transit_stop_details_transitAgencyPrompt"/>
+               
+        <TextView
+        android:id="@+id/transit_stop_agency_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/website"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/transit_stop_name_prompt"
+		android:layout_below="@+id/transit_stop_agency_name_value"/>
+        
+          <TextView
+        android:id="@+id/transit_stop_agency_url_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_agency_url"
+		android:layout_toRightOf="@+id/transit_stop_agency_url"
+        android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/transit_stop_agency_name_value"/>
+           
+            <TextView
+        android:id="@+id/transit_stop_agency_phonePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/phone"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/transit_stop_agency_url"
+		android:layout_below="@+id/transit_stop_agency_url_value"/>
+        
+          <TextView
+        android:id="@+id/transit_stop_agency_phoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/transit_stop_agency_phonePrompt"
+		android:layout_toRightOf="@+id/transit_stop_agency_phonePrompt"
+        android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/transit_stop_agency_url_value"/>
+          
+      </RelativeLayout>
+    </ScrollView>
+    
+      <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="@dimen/zerodip"
+             android:layout_weight="@string/dialogButtonsWeight"
+			 android:id="@+id/transit_stop_details_close"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:layout_marginTop="@dimen/fiftydp">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/transit_stop_details_ok"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/ok"
+        android:layout_weight="1" />
+            </LinearLayout>
+         
+  
+</LinearLayout>

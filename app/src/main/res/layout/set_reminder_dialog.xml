@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  
+     <TextView
+      android:id="@+id/set_reminder_dialogtitle"
+      android:layout_width="fill_parent"
+  	  android:layout_height="@dimen/zerodip"
+      android:layout_weight="@string/dialogTitleWeight"
+	  android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="@color/hololighttext"
+ 	 android:paddingTop="@dimen/fifteendp"
+	android:paddingBottom="@dimen/fifteendp"
+	android:paddingLeft="@dimen/tendp"
+   	android:text="@string/setReminder"/>
+	    
+        <View 
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+  
+   <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/set_reminder_dialogscroll"
+        android:layout_marginTop="@dimen/twentydp"
+        android:layout_gravity="center">
+     
+    <LinearLayout
+        android:id="@+id/set_reminder_dialog_contentlayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+         android:padding="@dimen/tendp" >
+        
+        	<Button
+	    android:id="@+id/set_reminder_dialog_datetime"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:background="@drawable/button_selector"
+	    android:layout_gravity="center"
+	    android:padding="@dimen/tendp"
+	    android:textColor="@color/red"/>
+
+	<RelativeLayout
+	    android:id="@+id/set_reminder_dialog_eventdetailslayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/border_bluefill"
+	    android:layout_margin="@dimen/thirtydp"
+	    android:padding="@dimen/tendp"
+	    android:gravity="center">
+	    
+    
+    <TextView 
+        android:id="@+id/set_reminder_dialog_eventname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/tendp"
+        android:textColor="@color/darkSlateBlue"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/set_reminder_dialog_startsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_reminder_dialog_eventname"
+        android:layout_marginTop="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/starts"/>
+    <TextView
+        android:id="@+id/set_reminder_dialog_startsvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/set_reminder_dialog_startsprompt"
+        android:layout_alignBaseline="@+id/set_reminder_dialog_startsprompt"
+        android:layout_below="@+id/set_reminder_dialog_eventname"
+        android:layout_marginLeft="@dimen/fivedp"/>
+    <TextView
+        android:id="@+id/set_reminder_dialog_endsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_reminder_dialog_startsvalue"
+        android:layout_alignRight="@+id/set_reminder_dialog_startsprompt"
+        android:layout_marginTop="@dimen/tendp"
+        android:text="@string/ends"/>
+    <TextView
+        android:id="@+id/set_reminder_dialog_endsvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tendp"
+		android:layout_marginLeft="@dimen/fivedp"        
+        android:layout_below="@+id/set_reminder_dialog_startsvalue"
+        android:layout_toRightOf="@+id/set_reminder_dialog_endsprompt"
+        android:layout_alignBaseline="@+id/set_reminder_dialog_endsprompt"/>
+   	        	    
+	</RelativeLayout>
+	</LinearLayout>
+</ScrollView>
+ <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+       		 android:layout_weight="@string/dialogButtonsWeight"
+          	 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/set_reminder_dialog_buttonsbar">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/set_reminder_dialog_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/cancel"
+        android:layout_weight="1" />
+         <Button
+        android:id="@+id/set_reminder_dialog_set"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+            android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/button_selector_group"
+        android:text="@string/set" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle" />
+   
+        </LinearLayout>
+   
+</LinearLayout>

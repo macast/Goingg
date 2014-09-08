@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+     <TextView
+       android:id="@+id/friend_req_msg_from"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+	   android:layout_centerHorizontal="true"
+	   android:textAppearance="?android:attr/textAppearanceMedium"
+	   android:textColor="@color/hololighttext"
+	   android:layout_marginTop="@dimen/thirtydp"
+	   android:textStyle="bold"/>
+   <TextView
+       android:id="@+id/friend_req_loction"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/fivedp"
+       android:layout_below="@+id/friend_req_msg_from"
+       android:layout_centerHorizontal="true"/>
+   
+      <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:id="@+id/friend_req_msg_scroll"
+        android:layout_below="@+id/friend_req_loction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/twentydp">        
+	   
+	      <TextView
+	          android:id="@+id/friend_req_msg_detail"
+	          android:layout_height="wrap_content"
+	          android:layout_width="wrap_content"
+	          android:layout_gravity="center"
+	          android:gravity="center"/>
+	          
+      </ScrollView>
+      
+      <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/friend_req_msg_buttons"
+       		 android:layout_below="@+id/friend_req_msg_scroll"
+       		 android:layout_marginTop="@dimen/tendp">
+	             
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/friend_req_msg_deny"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/deny"
+        android:layout_weight="1" 
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+         <Button
+        android:id="@+id/friend_req_msg_accept"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/acceptAdd" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+        </LinearLayout>    
+    
+</RelativeLayout>    
+
+
+
+
+

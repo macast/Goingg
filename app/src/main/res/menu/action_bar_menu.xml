@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  
+        
+      <item
+          android:id="@+id/action_signin"
+          android:orderInCategory="1"
+          android:showAsAction="always"
+          android:icon="@drawable/signedout"
+          android:title="@string/login"/>
+      
+       <item
+          android:id="@+id/action_signout"
+          android:orderInCategory="1"
+          android:showAsAction="always"
+          android:icon="@drawable/signedin"
+          android:title="@string/signout"/>              
+     <item
+        android:id="@+id/action_personalize"
+        android:showAsAction="always"
+        android:icon="@drawable/personalize"
+        android:orderInCategory="2"
+        android:title="@string/title_activity_personalize"/>     
+     
+  		<item
+        android:id="@+id/action_view_reminders"
+        android:showAsAction="collapseActionView"
+        android:orderInCategory="3"
+        android:icon="@drawable/bigbell"
+        android:title="@string/title_activity_view_reminders"/> 
+        
+  		<item
+        android:id="@+id/action_settings"
+        android:showAsAction="collapseActionView"
+        android:orderInCategory="4"
+        android:icon="@drawable/app_settings"
+        android:title="@string/title_activity_app_settings"/> 
+ 
+</menu>

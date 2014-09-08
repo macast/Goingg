@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="deny">Deny</string>
+    <string name="acceptAdd">Accept &amp; add</string>
+    <string name="sent">Sent:</string>
+    <string name="addmsg">add message with request</string>
+    <string name="revokeAccess">Sign Out/\nRevoke access</string>
+    <string name="verificationID">Verification ID</string>
+    <string name="goingID">Going ID\n(used only for private events)</string>
+    <string name="ggle_role_arn">arn:aws:iam::205767165138:role/GoogleAdminRole</string>
+    <string name="entercontactcity">enter contact residence city</string>
+    <string name="entercontactlname">enter contact\'s last name</string>
+    <string name="entercontactfname">enter contact\'s first name</string>
+    <string name="enterlastname">enter your last name</string>
+    <string name="enterfirstname">enter your first name</string>
+    <string name="entercity">enter your city</string>
+    <string name="newcontact">New contact</string>
+    <string name="entercontactgoingid">enter contact\'s Going id</string>
+    <string name="add">Add</string>
+    <string name="addnew">add new</string>
+    <string name="showevents">Show places &amp; events near me</string>
+    <string name="signout">Logout</string>
+    <string name="nowat">0/10</string>
+    <string name="dragbar">Scroll bar to value:</string>
+    <string name="confirmpwd">re-type password</string>
+    <string name="entersecretword">enter security keyword</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username">enter username</string>
+    <string name="password">enter password</string>
+    <string name="createAndSendInvites">Create event &amp; send invites</string>
+    <string name="enterSendTo">enter invitees\' contact info</string>
+    <string name="sendTo">Send to:</string>
+    <string name="sendAs">Send as:</string>
+    <string name="enterSenderName">enter sender(your?) name</string>
+    <string name="maybe">Maybe</string>
+    <string name="nope">Nope</string>
+    <string name="user_stats">User stats</string>
+    <string name="events_submitted">Events submitted:</string>
+    <string name="spam_generated">Spam generated:</string>
+    <string name="spam_reported">Spam reported:</string>
+    <string name="transitstopdetails">Transit stop details</string>
+    <string name="source">Source:</string>
+    <string name="app_name">Going</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_settings">Search settings</string>
+    <string name="name">Name:</string>
+    <string name="starts">Starts:</string>
+    <string name="ends">Ends:</string>
+    <string name="info">Information:</string>
+    <string name="website">Website:</string>
+    <string name="contactDetails">Contact details</string>
+    <string name="contactposition">Position:</string>
+    <string name="phone">Phone:</string>
+    <string name="email">e-mail:</string>
+    <string name="address">Address:</string>
+    <string name="close">close</string>
+    <string name="desc">Description:</string>
+    <string name="eventDets">Event details</string>
+    <string name="distance">Distance:</string>
+    <string name="time">Time:</string>
+    <string name="settings">Settings</string>
+    <string name="start">Start: </string>
+    <string name="destination">Destination: </string>
+    <string name="mode">Mode: </string>
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
+    <string name="fromAddHint">More complete the address, better the results!</string>
+    <string name="avoidHighway">avoid highways</string>
+    <string name="avoidTolls">avoid tolls</string>
+    <string name="departAt">Depart at: </string>
+    <string name="arriveBy">Arrive by: </string>
+    <string name="category">Category: </string>
+    <string name="date">Date(s)</string>
+    <string name="from">From: </string>
+    <string name="to">To: </string>
+    <string name="within">Within: \n(approx.) </string>
+    <string name="search">Search</string>
+    <string name="location">Location</string>
+    <string name="ok">OK</string>
+    <string name="numStops">Number of stops:</string>
+    <string name="stopName">Stop name:</string>
+    <string name="transitAgency">Transit agency</string>
+    <string name="miles">mi</string>
+    <string name="dateTimePickerTitle">Set date and time</string>
+    <string name="dialogTitleWeight">0.05</string>
+    <string name="dialogScrollWeight">2.5</string>
+    <string name="dialogButtonsWeight">0.2</string>
+    <string name="forprompt">Date:</string>
+    <string name="price">Price:</string>
+    <string name="h">H:</string>
+    <string name="l">L:</string>
+    <string name="weatherforecast">Weather forecast</string>
+    <string name="bullet">•</string>
+    <string name="setReminder">Event reminder</string>
+    <string name="sharevia">Share via</string>
+    <string name="content">Content:</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="subject">Subject</string>
+    <string name="post">Post</string>
+    <string name="noEvents">Number showing: </string>
+    <string name="legend">legend</string>
+    <string name="enteraddress">Enter address</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="zipcode">Zip code</string>
+    <string name="map_key">AIzaSyAR7XCIJCr5RQcHRrxDv8rBULXJy8fdSSc</string>
+    <string name="title_activity_map_view_home">Events</string>
+    <string name="title_activity_map_directions">Directions</string>
+    <string name="title_activity_view_reminders">Event Reminders</string>
+    <string name="sortby">sort by:</string>
+    <string name="nearest">Nearest</string>
+    <string name="sooneststart">Soonest starting</string>
+    <string name="categoryaz">Category (A-Z)</string>
+    <string name="categoryza">Category (Z-A)</string>
+    <string name="showmore">show more</string>
+    <string name="events">events</string>
+    <string name="places">places</string>
+    <string name="both">both</string>
+    <string name="show">Show:</string>
+    <string name="title_activity_personalize">Personalize</string>
+    <string name="farenheit"><b><u>\u2109</u></b></string>
+    <string name="celsius"><b><u>\u2103</u></b></string>
+    <string name="url">URL:</string>
+    <string name="create">Create</string>
+    <string name="namehint">enter event title</string>
+    <string name="urlhint">enter event url</string>
+    <string name="addresshint">enter complete event postal address</string>
+    <string name="pricehint">enter event price :amountvalue <i>space</i> currency</string>
+    <string name="deschint">enter event details in under 1001 characters</string>
+    <string name="datetimehint">enter date time</string>
+    <string name="goingcolon">Going:</string>
+    <string name="nopecolon">Nope:</string>
+    <string name="maybecolon">Maybe:</string>
+    <string name="markedeventprompt">You marked this event </string>
+    <string name="hereswhy">Here\'s why:</string>
+    <string name="hereswhywid">So Going knows you\'re valid and can connect you to its server. \n\n<b>How often 
+        will you have to sign in</b>\nOnly once. Unless you choose to sign out/ revoke access.\n\n<b>        How it works</b>\n* When you click on Sign In, Google takes over from Going. \n* Once you enter
+         your credentials, Google authenticates your account and lets Going know if you\'re a valid Google+ 
+         user.\n* Note here that Going cannot read your entered user id/ password - Going is completely out
+          of the picture, at this point. It is just between Google and you. \n* If Google confirms 
+          to Going that you are an authenticated user, the app kick starts. \n* Google sends Going limited 
+          information about you like your Google+ user id. Going uses this data to validate you.\n\n<b>What information 
+          Going uses from your Google+ login</b>\nShould be successfully authenticated, Going receives your Google+ user id and 
+          an identity token (string) Google+ issued Going, on your behalf. \n\n<b>What Going does with this 
+          data</b>\nConnects you to its server. You will neither be sent any email using this data, nor will 
+          Going make use of the social component of your Google+ account (no posting anything!). Also, your user id
+          is only stored LOCALLY on your device. For more, see Going\'s privacy policy. \n\n<b>Tell me a joke</b>\nNo.</string>
+    <string name="eula"> This software may not, in whole or in any part, be copied, reproduced, transmitted, translated (into any language, natural or computer), stored in a retrieval system, reduced to any electronic 
+medium or machine readable format, or by any other form or means without prior consent, in writing, from BitBusy.
+
+You are granted a limited license to use this software. The software may be used or copied only in accordance with the terms of that license, which is described in the following paragraphs.
+
+\n\nLICENSE:
+
+\"THE SOFTWARE\" SHALL BE TAKEN TO MEAN THE SOFTWARE CONTAINED IN THIS PACKAGE AND ANY SUBEQUENT VERSIONS OR UPGRADES RECEIVED AS A RESULT OF HAVING 
+PURCHASED THIS PACKAGE. \"BUYER\" SHALL BE TAKEN AS THE ORIGINAL \"DOWNLOADER\" OF THE SOFTWARE. 
+
+BUYER HAS THE NON-EXCLUSIVE RIGHT TO USE THE SOFTWARE ONLY ON A SINGLE MOBILE, ELECTRONIC DEVICE. BUYER MAY NOT ELECTRONICALLY TRANSFER THE PROGRAM FROM ONE 
+DEVICE TO ANOTHER OVER ANY TYPE OF NETWORK. BUYER MAY NOT DISTRIBUTE COPIES OF THE SOFTWARE OR THE ACCOMPANYING DOCUMENTATION TO OTHERS EITHER FOR A FEE OR WITHOUT CHARGE. BUYER MAY NOT MODIFY 
+OR TRANSLATE THE PROGRAM OR DOCUMENTATION. USER MAY NOT DISASSEMBLE THE PROGRAM OR ALLOW IT TO BE DISASSEMBLED INTO ITS CONTITUENT SOURCE CODE. BUYER\'S USE OF THE SOFTWARE INDICATES HIS/HER 
+ACCEPTANCE OF THESE TERMS AND CONDITIONS. IF BUYER DOES NOT AGREE TO THESE CONDITIONS, ERASE THE SOFTWARE FROM ANY AND ALL STORAGE DEVICES UPON WHICH IT MAY HAVE BEEN INSTALLED.
+
+\n\nDISCLAIMER / LIMITATION OF LIABILITY:
+
+BUYER ACKNOWLEDGES THAT THE SOFTWARE MAY NOT BE FREE FROM DEFECTS AND MAY NOT SATISFY ALL OF BUYER\'S NEEDS. IN NO EVENT WILL THE DEVELOPER BE LIABLE FOR DIRECT, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGE 
+OR DAMAGES RESULTING FROM LOSS OF USE, OR LOSS OF ANTICIPATED PROFITS RESULTING FROM ANY DEFECT IN THE PROGRAM, EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   </string>
+    <string name="updates">Version updates:\n• Minor UI changes\n• Bug fixes \n\n</string>
+    <string name="title_activity_create_event">Public event</string>
+    <string name="title_activity_create_private_event">Private event</string>
+    <string name="title_activity_my_account">ActivityMyAccount</string>
+    <string name="title_activity_contacts">ActivityContacts</string>
+    <string name="title_activity_app_settings">Settings</string>
+    <string name="title_activity_view_my_account">ActivityViewMyAccount</string>
+    <string name="title_activity_activity_view_messages">Messages</string>
+
+</resources>

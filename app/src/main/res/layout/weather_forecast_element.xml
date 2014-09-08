@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+   <TextView
+       android:id="@+id/weather_forecast_element_dateprompt"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:text="@string/forprompt"
+       android:textColor="@color/red"/>
+   
+   <TextView
+       android:id="@+id/weather_forecast_element_datevalue"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:layout_marginLeft="@dimen/fivedp"
+       android:layout_toRightOf="@+id/weather_forecast_element_dateprompt"
+       android:textColor="@color/red"/>
+
+   <LinearLayout
+       android:id="@+id/weather_forecast_element_desclayout"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:orientation="vertical"
+       android:layout_below="@+id/weather_forecast_element_datevalue"
+       android:layout_marginTop="@dimen/twentydp"
+       android:gravity="center"
+       android:layout_marginLeft="@dimen/fiftydp">
+       
+       <ImageView
+           android:id="@+id/weather_forecast_element_descimg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="@dimen/fivedp"
+           android:layout_gravity="center"/>
+       <TextView
+           android:id="@+id/weather_forecast_element_desctext"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:textColor="@color/black"
+           android:textStyle="bold"/>
+   </LinearLayout>
+   
+   <TextView
+       android:id="@+id/weather_forecast_element_highprompt"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/h"
+       android:layout_toRightOf="@+id/weather_forecast_element_desclayout"
+       android:layout_marginLeft="@dimen/tendp"
+       android:layout_alignBaseline="@+id/weather_forecast_element_desclayout"
+       android:layout_marginTop="@dimen/twentydp"
+       android:layout_below="@+id/weather_forecast_element_datevalue"
+       android:textColor="@color/black"
+       android:textStyle="bold"/>
+   <TextView
+       android:id="@+id/weather_forecast_element_highvalue"
+       android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:layout_toRightOf="@+id/weather_forecast_element_highprompt"
+	   android:layout_marginTop="@dimen/tendp"
+	   android:layout_alignBottom="@+id/weather_forecast_element_highprompt"
+	   android:layout_marginLeft="@dimen/fivedp"
+	   android:textColor="@color/black"
+	   android:textStyle="bold"/>
+   <TextView
+       android:id="@+id/weather_forecast_element_lowprompt"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/tendp"
+       android:text="@string/l"
+       android:textColor="@color/black"
+       android:layout_marginTop="@dimen/tendp"
+       android:layout_below="@+id/weather_forecast_element_highvalue"
+       android:layout_alignRight="@+id/weather_forecast_element_highprompt"
+       android:textStyle="bold"/>
+   <TextView
+       android:id="@+id/weather_forecast_element_lowvalue"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/black"
+       android:layout_toRightOf="@+id/weather_forecast_element_lowprompt"
+       android:layout_alignBaseline="@+id/weather_forecast_element_lowprompt"
+       android:layout_marginLeft="@dimen/fivedp"
+       android:layout_below="@+id/weather_forecast_element_highvalue"
+       android:textStyle="bold"/>
+       
+   <ToggleButton
+        android:id="@+id/weather_forecast_element_tempunitbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/farenheit"
+        android:textOff="@string/celsius"
+        android:layout_toRightOf="@+id/weather_forecast_element_lowvalue"
+        android:layout_alignTop="@+id/weather_forecast_element_highvalue"
+        android:background="@drawable/button_selector_nocolor_color"
+        style="?android:attr/buttonStyleSmall"
+	    android:textColor="@color/hololighttext"
+        android:checked="true" />
+   
+	  
+</RelativeLayout>

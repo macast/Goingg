@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tendp">
+    
+    <TextView
+        android:id="@+id/reminder_element_datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 	    android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginTop="@dimen/tendp"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:layout_marginBottom="@dimen/tendp"/>
+    
+	<ImageButton
+	    android:id="@+id/reminder_element_delete"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/reminder_element_datetime"
+	    android:background="@drawable/button_selector_nocolor_color"
+	    android:src="@drawable/delete"/>
+	
+	<TextView
+	    android:id="@+id/reminder_element_eventname"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:layout_below="@+id/reminder_element_datetime"
+	    android:textColor="@color/darkSlateBlue"/>
+	<TextView
+	    android:id="@+id/reminder_element_startsprompt"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/reminder_element_eventname"
+	    android:text="@string/starts"/>
+	<TextView
+	    android:id="@+id/reminder_element_startsvalue"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/reminder_element_startsprompt"
+	    android:layout_alignBaseline="@+id/reminder_element_startsprompt"
+	    android:layout_marginLeft="@dimen/fivedp"
+	    android:layout_below="@+id/reminder_element_eventname"/>
+	</RelativeLayout>

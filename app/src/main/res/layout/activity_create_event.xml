@@ -1,0 +1,225 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivityCreateEvent" 
+    android:orientation="vertical"
+    android:background="@drawable/listview_bkgrnd"  >
+
+          <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_create_event_namevalue_rellayout">
+    
+ <TextView
+     android:layout_marginTop="@dimen/tendp"
+     android:id="@+id/activity_create_event_nameprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/fiftydp"
+     android:text="@string/name"/>
+ <EditText
+     android:id="@+id/activity_create_event_namevalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_event_nameprompt"
+     android:layout_alignBaseline="@+id/activity_create_event_nameprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:textAppearance="?android:attr/textAppearanceSmall"     
+     android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true"
+	android:imeOptions="actionNext"
+	android:hint="@string/namehint"/> 
+
+      <TextView
+        android:id="@+id/activity_create_event_dateFromPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/thirtydp"
+		android:layout_marginLeft="@dimen/tendp"
+		android:layout_below="@+id/activity_create_event_namevalue"/>
+
+ <EditText
+        android:id="@+id/activity_create_event_dateFromvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_marginTop="@dimen/thirtydp"
+        android:layout_toRightOf="@+id/activity_create_event_dateFromPrompt"
+        android:layout_alignBaseline="@+id/activity_create_event_dateFromPrompt"
+        android:layout_marginLeft="@dimen/fivedp"
+  		android:layout_below="@+id/activity_create_event_namevalue"
+  		android:textAppearance="?android:attr/textAppearanceSmall"
+  		android:padding="@dimen/fivedp"
+  		android:cursorVisible="false"
+  		android:focusableInTouchMode="false"
+  		android:inputType="none"
+  		android:hint="@string/datetimehint"/>     
+      
+ 
+<TextView
+        android:id="@+id/activity_create_event_dateToPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/thirtydp"
+		android:layout_toRightOf="@+id/activity_create_event_dateFromvalue"
+		android:layout_alignBaseline="@+id/activity_create_event_dateFromvalue"
+		android:layout_marginLeft="@dimen/tendp"
+		android:layout_below="@+id/activity_create_event_namevalue"/>
+
+ <EditText
+        android:id="@+id/activity_create_event_dateTovalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_marginTop="@dimen/thirtydp"
+        android:layout_toRightOf="@+id/activity_create_event_dateToPrompt"
+        android:layout_alignBaseline="@+id/activity_create_event_dateToPrompt"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_below="@+id/activity_create_event_namevalue"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:padding="@dimen/fivedp"
+		android:cursorVisible="false"
+		android:focusableInTouchMode="false"
+		android:inputType="none"
+		android:hint="@string/datetimehint"/>     
+  <TextView
+     android:id="@+id/activity_create_event_categoryprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_event_nameprompt"
+     android:text="@string/category"
+     android:layout_below="@+id/activity_create_event_dateTovalue"
+     android:layout_marginTop="@dimen/thirtydp"
+     android:paddingTop="@dimen/fivedp"
+     android:paddingBottom="@dimen/fivedp"/>
+ 
+   <Button
+        android:id="@+id/activity_create_event_categoryvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/activity_create_event_categoryprompt"
+        android:layout_marginLeft="@dimen/fivedp"
+        android:layout_below="@+id/activity_create_event_dateTovalue"
+        android:layout_alignTop="@+id/activity_create_event_categoryprompt"
+        android:layout_alignBottom="@+id/activity_create_event_categoryprompt"
+        android:background="@drawable/button_selector_colored"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:onClick="selectCategories"        />
+ <TextView
+     android:id="@+id/activity_create_event_descriptionprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_alignRight="@+id/activity_create_event_categoryprompt"
+     android:text="@string/desc"
+     android:layout_below="@+id/activity_create_event_categoryvalue"
+     android:layout_marginTop="@dimen/thirtydp"/>
+ <EditText
+     android:id="@+id/activity_create_event_descriptionvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_event_descriptionprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_event_categoryvalue"
+     android:layout_alignBaseline="@+id/activity_create_event_descriptionprompt"
+     android:hint="@string/deschint"
+     android:textAppearance="?android:attr/textAppearanceSmall" 
+	android:imeOptions="actionNext"/> 
+  <TextView
+     android:id="@+id/activity_create_event_priceprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_event_descriptionprompt"
+     android:text="@string/price"
+     android:layout_below="@+id/activity_create_event_descriptionvalue"
+     android:layout_marginTop="@dimen/fiftydp"/>
+ <EditText
+     android:id="@+id/activity_create_event_pricevalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_event_priceprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_event_descriptionvalue"
+     android:layout_alignBaseline="@+id/activity_create_event_priceprompt"
+     android:hint="@string/pricehint"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+      	android:imeOptions="actionNext"/>      	
+<TextView
+     android:id="@+id/activity_create_event_addressprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_event_priceprompt"
+     android:text="@string/address"
+     android:layout_below="@+id/activity_create_event_pricevalue"
+     android:layout_marginTop="@dimen/fiftydp"/>
+ <EditText
+     android:id="@+id/activity_create_event_addressvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_event_addressprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_event_pricevalue"
+     android:layout_alignBaseline="@+id/activity_create_event_addressprompt"
+     android:layout_marginBottom="@dimen/tendp"
+     android:hint="@string/addresshint"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:cursorVisible="false"
+		android:focusableInTouchMode="false"
+		android:inputType="none" />
+ <TextView
+     android:id="@+id/activity_create_event_urlprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_event_addressprompt"
+     android:text="@string/url"
+     android:layout_below="@+id/activity_create_event_addressvalue"
+     android:layout_marginTop="@dimen/fiftydp"/>
+ <EditText
+     android:id="@+id/activity_create_event_urlvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_event_urlprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_event_addressprompt"
+     android:layout_alignBaseline="@+id/activity_create_event_urlprompt"
+     android:layout_marginBottom="@dimen/tendp"
+     android:hint="@string/urlhint"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+	android:imeOptions="actionDone"
+	android:singleLine="true"/>	 
+ 
+  <Button
+        android:id="@+id/activity_create_event_createbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/create" 
+          android:textAppearance="?android:attr/textAppearanceSmall"
+        style="?android:attr/buttonBarButtonStyle" 
+        android:layout_below="@+id/activity_create_event_urlvalue"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/hundreddp"
+        android:onClick="createEvent"/>
+   
+ 
+</RelativeLayout>
+</ScrollView>
+
+           
+        
+
+

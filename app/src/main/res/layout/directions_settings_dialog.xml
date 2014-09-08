@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/direction_settings_dialogTitle">        
+       <TextView
+        android:id="@+id/direction_settings_dialogTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+         </LinearLayout>
+      <View 
+   		android:layout_width="fill_parent"
+   	android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+       
+ 
+        
+            <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/direction_settings_scrollview">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/direction_settings_relativelayoutcontent">
+       <TextView
+        android:id="@+id/directions_settings_startPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textColor="@color/black"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:paddingLeft="@dimen/fiftydp"
+		android:layout_marginTop="@dimen/tendp"/>
+       
+         <EditText
+        android:id="@+id/directions_settings_startValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+		android:layout_toRightOf="@+id/directions_settings_startPrompt"
+		android:layout_alignBaseline="@+id/directions_settings_startPrompt"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:hint="@string/fromAddHint"
+		android:imeOptions="actionDone"
+		android:inputType="textPostalAddress"/>
+         
+       <TextView
+        android:id="@+id/directions_settings_destinationPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/destination"
+        android:textColor="@color/black"
+ 		android:layout_marginLeft="@dimen/fivedp"
+        android:layout_below="@+id/directions_settings_startValue"
+        android:layout_alignRight="@+id/directions_settings_startPrompt"
+        android:layout_marginTop="@dimen/twentydp"/>
+        
+         <TextView
+        android:id="@+id/directions_settings_destinationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/directions_settings_destinationPrompt"
+        android:layout_below="@+id/directions_settings_startValue"
+		android:layout_toRightOf="@+id/directions_settings_destinationPrompt"
+		android:layout_marginLeft="@dimen/fivedp"/>
+		 
+     
+       <TextView
+        android:id="@+id/directions_settings_modePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mode"
+        android:textColor="@color/black"
+ 		android:layout_marginLeft="@dimen/fivedp"
+ 		android:layout_below="@+id/directions_settings_destinationValue"
+        android:layout_alignRight="@+id/directions_settings_destinationPrompt"
+        android:layout_marginTop="@dimen/fiftydp"/>
+            
+         <HorizontalScrollView
+             android:id="@+id/directions_settings_modeValues"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/directions_settings_modePrompt"
+             android:layout_alignTop="@+id/directions_settings_modePrompt"
+             android:layout_below="@+id/directions_settings_destinationValue"
+             android:paddingRight="@dimen/tendp">
+             
+        <RadioGroup
+        android:id="@+id/directions_settings_modeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+ 
+        <RadioButton
+            android:id="@+id/directions_settings_mode_drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/car"
+            android:checked="true" />
+         
+          <RadioButton
+            android:id="@+id/directions_settings_mode_publictransport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/bus" />
+ 
+        <RadioButton
+            android:id="@+id/directions_settings_mode_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/walk" />
+        
+            <RadioButton
+            android:id="@+id/directions_settings_mode_bike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/bike" />
+ 
+ 
+    </RadioGroup>
+           </HorizontalScrollView>
+           
+         <LinearLayout 
+             android:id="@+id/checkboxes"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="@dimen/tendp"
+        	 android:layout_below="@+id/directions_settings_modeValues">
+          <CheckBox
+        android:id="@+id/directions_settings_avoidHighway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avoidHighway"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginLeft="@dimen/twentydp"/>
+ 
+    <CheckBox
+        android:id="@+id/directions_settings_avoidToll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avoidTolls"
+        android:layout_marginLeft="@dimen/fivedp" 
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+            </LinearLayout>
+        <RadioGroup
+        android:id="@+id/directions_settings_dateTimeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_below="@+id/directions_settings_modeValues"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/tendp">
+         
+        <RadioButton
+            android:id="@+id/directions_settings_depart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/departAt"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:checked="true" />
+         
+          <RadioButton
+            android:id="@+id/directions_settings_arrive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arriveBy"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RadioGroup>
+         <LinearLayout 
+             android:id="@+id/directions_datetimelayout"
+             android:layout_below="@+id/directions_settings_dateTimeGroup"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_centerHorizontal="true"
+           	 style="?android:attr/buttonBarStyle">
+             
+        <Button
+        android:id="@+id/direction_settings_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+		android:layout_marginLeft="@dimen/tendp"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:background="@drawable/button_selector"
+		android:layout_marginBottom="@dimen/tendp"
+        style="?android:attr/buttonBarButtonStyle" />
+
+            
+        <Button
+        android:id="@+id/direction_settings_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="@drawable/button_selector"
+        android:layout_marginBottom="@dimen/tendp"
+         style="?android:attr/buttonBarButtonStyle" />
+        
+        
+        </LinearLayout>
+         
+ 
+                       </RelativeLayout>
+                               </ScrollView>
+     <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="@dimen/zerodip"
+             android:layout_weight="@string/dialogButtonsWeight"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/direction_settings_buttons"
+       		 android:layout_marginTop="@dimen/fiftydp">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/directions_settings_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/cancel"
+        android:layout_weight="1" />
+         <Button
+        android:id="@+id/directions_settings_set"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/set" 
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        style="?android:attr/buttonBarButtonStyle" />
+   
+        </LinearLayout>
+         
+        
+ 
+            
+                 
+</LinearLayout>
+ 
+
+
+
+

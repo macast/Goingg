@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="titleHeaderGrey">#909090</color>
+   	<color name="bordergroupbutton">#E3E3E3</color>
+     <color name = "transparent">#0000</color>
+     <color name = "black">#000000</color>
+     <color name = "transparentwhite">#80FFFFFF</color>
+     <color name = "grey">#505050</color>
+     <color name ="myaccountheader">#707070</color>
+     <color name = "blue">#70E0FFFF</color>
+     <color name = "lightGrey">#EDEFEE</color>
+     <color name = "cyan">#00FFFF</color>
+     <color name = "white">#FFFFFF</color>
+    <color name = "powerblue">#B0E0E6</color>
+    <color name = "lightgrey">#919191</color>
+    <color name = "red">#990012</color>
+    <color name = "darkgrey">#636363</color>
+     <color name = "darkSlateBlue">#0D4F8B</color>
+    <color name = "darkBlue">#000080</color>
+    <color name="hueazure">#007FFF</color>
+    <color name="hueblue">#191970</color>
+    <color name="huecyan">#00ffff</color>
+    <color name="huegreen">#77DD77</color>
+    <color name="huemagenta">#FF00FF</color>
+    <color name="hueorange">#CD7F32</color>
+   	<color name="huered">#FF0000</color>
+   	<color name="huerose">#FF00CC</color>
+   	<color name="hueviolet">#7F00FF</color>
+   	<color name="hueyellow">#FFFF00</color>
+   	<color name="hololighttext">#33B5E5</color>
+   	<color name="groupButtonClick">#56B8D8</color>
+      <color name = "nonPinkLavendarBlush">#EBDDE2</color>
+      <color name = "lavendarBlush">#EBDDE2</color>
+     	<color name="hololink">#0000ee</color>
+<color name = "darkSlateGray">#3063A5</color>
+ <color name="mothgreen">#7BBF6A</color>
+ <color name="soylentred">#E04006</color>
+ <color name="orange">#FFA500</color>
+ <color name="lightestGrey">#EDEDED</color>
+</resources>

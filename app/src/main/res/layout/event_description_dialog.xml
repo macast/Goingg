@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/event_desc_title">
+        
+       <TextView
+        android:id="@+id/event_desc_titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+      
+     </LinearLayout>
+          <View 
+   		android:layout_width="fill_parent"
+   	android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>
+       
+   
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/event_desc_dialog_scrollView">
+         
+    <TextView
+        android:id="@+id/event_desc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/tendp"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_marginRight="@dimen/tendp"
+		android:layout_marginBottom="@dimen/fivedp"/>
+    
+    </ScrollView>
+ 
+     <Button
+        android:id="@+id/event_desc_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogButtonsWeight"
+        android:textColor="@color/black"      
+          android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/button_selector_group"
+        android:text="@string/ok"
+        android:layout_marginTop="@dimen/fiftydp"/>
+    
+          </LinearLayout>

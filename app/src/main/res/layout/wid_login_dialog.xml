@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:gravity="center"
+    android:paddingBottom="@dimen/tendp">
+     <com.google.android.gms.common.SignInButton
+        android:id="@+id/wid_login_imgBtn_Gplus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:layout_marginLeft="@dimen/fortydp"
+        android:layout_marginRight="@dimen/fortydp"/>
+     <ImageButton
+         android:id="@+id/wid_login_info"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="@dimen/tendp"
+     	 android:layout_below="@+id/wid_login_imgBtn_Gplus"
+         android:layout_marginTop="@dimen/fiftydp"
+         android:src="@drawable/information"
+         android:background="@drawable/button_selector_transparent"/>
+     <TextView
+         android:id="@+id/wid_login_hereswhy"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/hereswhy"
+         android:layout_toLeftOf="@+id/wid_login_info"
+         android:layout_marginRight="@dimen/fivedp"
+         android:layout_alignBottom="@+id/wid_login_info"
+	     android:textAppearance="?android:attr/textAppearanceSmall"  />
+     
+         
+    
+</RelativeLayout>

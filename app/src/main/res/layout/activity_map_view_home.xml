@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+ 
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+       <RelativeLayout 
+		android:background="@color/transparentwhite"
+       android:layout_alignParentTop="true"
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="@dimen/fivedp"
+         android:id="@+id/activity_mapviewhome_header">
+                  
+      <ImageButton
+        android:id="@+id/activity_mapviewhome_listbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list_small" 
+        android:onClick="displayList"
+        android:background="@drawable/button_selector_nocolor_color"/>
+      
+       <ImageButton
+        android:id="@+id/activity_mapviewhome_mapbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/map_small" 
+        android:onClick="displayMap"
+        android:background="@drawable/button_selector_nocolor_color"
+        android:visibility="invisible"/>
+
+       <LinearLayout
+           android:id="@+id/activity_mapviewhome_events_no_layout"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:layout_alignBaseline="@+id/activity_mapviewhome_mapbutton"
+   	       android:layout_marginTop="@dimen/tendp"
+   	       android:layout_centerHorizontal="true"
+   	       android:orientation="horizontal"
+   	       android:gravity="center">
+  
+         <TextView
+        android:id="@+id/activity_mapviewhome_eventsNoPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleHeaderGrey"
+        android:text="@string/noEvents"
+        android:textStyle="bold"/>              
+        
+          <TextView
+        android:id="@+id/activity_mapviewhome_eventsNoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleHeaderGrey"
+        android:textStyle="bold"/>          
+        </LinearLayout>    
+        
+        <ImageButton
+        android:id="@+id/home_showmoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/showmore"
+        android:onClick="showMore"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/activity_mapviewhome_events_no_layout"
+       	android:layout_marginLeft="@dimen/fivedp"
+       	android:layout_alignTop="@+id/activity_mapviewhome_listbutton"
+       	android:background="@drawable/button_selector_nocolor_color"
+        android:layout_alignBottom="@+id/activity_mapviewhome_listbutton"/>
+       
+    
+        <ImageButton
+        android:id="@+id/activityMapView_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings" 
+        android:onClick="search"
+        android:background="@drawable/button_selector_nocolor_color"
+        android:layout_alignTop="@+id/activity_mapviewhome_listbutton"
+        android:layout_alignBottom="@+id/activity_mapviewhome_listbutton"
+        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+                       
+      <ProgressBar
+           android:id="@+id/home_progressbar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+	style="@android:style/Widget.ProgressBar.Inverse"         
+      	  android:layout_below="@+id/activity_mapviewhome_header"
+      	  android:layout_marginTop="@dimen/tendp"
+      	  android:layout_marginLeft="@dimen/tendp"
+      	  android:layout_marginRight="@dimen/tendp"
+      	  android:visibility="gone"/>
+
+      <LinearLayout 
+          android:id="@+id/activity_home_listlayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:layout_below="@+id/home_progressbar"
+          android:visibility="gone">
+      <ListView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="10"
+        android:id="@+id/activity_mapviewhome_list"
+        android:dividerHeight="@dimen/onedp"
+        android:divider="@color/grey"
+        android:clipToPadding="false"
+    	android:scrollbarStyle="outsideOverlay">
+    </ListView>
+    
+      <Spinner
+          android:id="@+id/activity_home_sortspinner"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/zerodip"
+          android:layout_weight="1"/>    
+      </LinearLayout>
+         <Button 
+           android:id="@+id/activity_mapviewhome_showeventsbutton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/button_selector"
+           android:padding="@dimen/tendp"
+           android:textStyle="bold"
+           android:onClick="showEvents"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:text="@string/showevents"
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+        
+                  
+        <Button
+        android:id="@+id/home_legendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/tendp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_selector_transparent"
+        android:onClick="openLegend"
+        android:text="@string/legend"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/titleHeaderGrey" />
+</RelativeLayout>

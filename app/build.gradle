@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.bitbusy.goingg"
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/aws-android-sdk-2.0.5-autoscaling.jar')
+    compile files('libs/aws-android-sdk-2.0.5-cloudwatch.jar')
+    compile files('libs/aws-android-sdk-2.0.5-core.jar')
+    compile files('libs/aws-android-sdk-2.0.5-core-no-third-party.jar')
+    compile files('libs/aws-android-sdk-2.0.5-ddb.jar')
+    compile files('libs/aws-android-sdk-2.0.5-ddb-mapper.jar')
+    compile files('libs/aws-android-sdk-2.0.5-ec2.jar')
+    compile files('libs/aws-android-sdk-2.0.5-elb.jar')
+    compile files('libs/aws-android-sdk-2.0.5-kinesis.jar')
+    compile files('libs/aws-android-sdk-2.0.5-mobileanalytics.jar')
+    compile files('libs/aws-android-sdk-2.0.5-s3.jar')
+    compile files('libs/aws-android-sdk-2.0.5-sdb.jar')
+    compile files('libs/aws-android-sdk-2.0.5-ses.jar')
+    compile files('libs/aws-android-sdk-2.0.5-sns.jar')
+    compile files('libs/aws-android-sdk-2.0.5-sqs.jar')
+    compile 'com.google.android.gms:play-services:4.3.+'
+}

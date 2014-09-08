@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/enter_address_title">
+                
+       <TextView
+        android:id="@+id/enter_address_titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enteraddress"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+    
+     </LinearLayout>
+ 
+     <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>
+       
+
+      <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"     
+        android:layout_weight="@string/dialogScrollWeight"  
+        android:id="@+id/enter_address_Scroll">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_time_picker_relLayoutContent">
+     
+ <TextView
+     android:layout_marginTop="@dimen/tendp"
+     android:id="@+id/enter_address_streetprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/thirtydp"
+     android:text="@string/street"/>
+ <EditText
+     android:id="@+id/enter_address_streetvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/enter_address_streetprompt"
+     android:layout_alignBaseline="@+id/enter_address_streetprompt"
+     android:layout_marginLeft="@dimen/fivedp"/>
+ 
+ <TextView
+     android:id="@+id/enter_address_cityprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/enter_address_streetprompt"
+     android:text="@string/city"
+     android:layout_below="@+id/enter_address_streetvalue"
+     android:layout_marginTop="@dimen/twentydp"/>
+ <EditText
+     android:id="@+id/enter_address_cityvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/enter_address_cityprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/enter_address_streetvalue"
+     android:layout_alignBaseline="@+id/enter_address_cityprompt"/>
+     
+ <TextView
+     android:id="@+id/enter_address_stateprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/enter_address_cityprompt"
+     android:text="@string/state"
+     android:layout_below="@+id/enter_address_cityvalue"
+     android:layout_marginTop="@dimen/twentydp"/>
+ <EditText
+     android:id="@+id/enter_address_statevalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/enter_address_stateprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/enter_address_cityvalue"
+     android:layout_alignBaseline="@+id/enter_address_stateprompt"/>
+ 
+  <TextView
+     android:id="@+id/enter_address_countryprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/enter_address_stateprompt"
+     android:text="@string/country"
+     android:layout_below="@+id/enter_address_statevalue"
+     android:layout_marginTop="@dimen/twentydp"/>
+ <EditText
+     android:id="@+id/enter_address_countryvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/enter_address_stateprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/enter_address_statevalue"
+     android:layout_alignBaseline="@+id/enter_address_countryprompt"/>
+<TextView
+     android:id="@+id/enter_address_postalcodeprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/enter_address_countryprompt"
+     android:text="@string/zipcode"
+     android:layout_below="@+id/enter_address_countryvalue"
+     android:layout_marginTop="@dimen/twentydp"/>
+ <EditText
+     android:id="@+id/enter_address_postalcodevalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/enter_address_postalcodeprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/enter_address_countryvalue"
+     android:layout_alignBaseline="@+id/enter_address_postalcodeprompt"
+     android:layout_marginBottom="@dimen/tendp"/>
+ 
+ 
+</RelativeLayout>
+</ScrollView>
+
+ <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+      		 android:layout_weight="@string/dialogButtonsWeight"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/date_time_picker_dialog_buttons">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/enter_address_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/cancel"
+        android:layout_weight="1" />
+         <Button
+        android:id="@+id/enter_address_set"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/set" 
+          android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle" />
+   
+        </LinearLayout>
+</LinearLayout>

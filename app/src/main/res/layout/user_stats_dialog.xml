@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/user_stats_dialog_titlelayout"
+  		android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/user_stats_dialog_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+	android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"
+		android:text="@string/user_stats"/>
+       </LinearLayout>  
+       <View 
+   		android:layout_width="fill_parent"
+   			android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+  
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/transit_stop_details_scrollView"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_stats_relLayoutContent">            	
+          <TextView
+        android:id="@+id/user_stats_events_prompt"
+        android:layout_marginLeft="@dimen/thirtydp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:text="@string/events_submitted"
+		android:layout_marginTop="@dimen/thirtydp"/>
+               
+     <TextView
+        android:id="@+id/user_stats_events_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/user_stats_events_prompt"
+		android:layout_toRightOf="@+id/user_stats_events_prompt"/>            	
+            	
+        <TextView
+        android:id="@+id/user_stats_spam_gen_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignRight="@+id/user_stats_events_prompt"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/user_stats_events_value"
+		android:text="@string/spam_generated"/>
+ 
+        <TextView
+        android:id="@+id/user_stats_spam_gen_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+        android:layout_marginTop="@dimen/tendp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/user_stats_spam_gen_prompt"
+		android:layout_toRightOf="@+id/user_stats_spam_gen_prompt"
+		android:layout_below="@+id/user_stats_events_value"/>
+		        
+         <TextView
+        android:id="@+id/user_stats_spam_rep_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/tendp"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/user_stats_spam_gen_prompt"
+		android:layout_below="@+id/user_stats_spam_gen_value"
+		android:text="@string/spam_reported"/>
+ 
+        <TextView
+        android:id="@+id/user_stats_spam_rep_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "@dimen/fivedp"
+		android:textColor="@color/black"
+		android:layout_alignBottom="@+id/user_stats_spam_rep_prompt"
+		android:layout_toRightOf="@+id/user_stats_spam_rep_prompt"
+		android:layout_below="@+id/user_stats_spam_gen_value"
+        android:layout_marginTop="@dimen/tendp"/>
+
+                
+      </RelativeLayout>
+    </ScrollView>
+    
+      <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="@dimen/zerodip"
+             android:layout_weight="@string/dialogButtonsWeight"
+			 android:id="@+id/user_stats_closelyt"
+       		 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:layout_marginTop="@dimen/fiftydp">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/user_stats_ok"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/ok"
+        android:layout_weight="1" />
+            </LinearLayout>
+         
+  
+</LinearLayout>

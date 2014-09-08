@@ -1,0 +1,220 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivityCreateEvent" 
+    android:orientation="vertical"
+    android:background="@drawable/listview_bkgrnd"  >
+
+          <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_create_private_event_namevalue_rellayout">
+    
+ <TextView
+     android:layout_marginTop="@dimen/tendp"
+     android:id="@+id/activity_create_private_event_sendAs_prompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/fiftydp"
+     android:text="@string/sendAs"/>
+ <EditText
+     android:id="@+id/activity_create_private_event_private_sendAs_value"
+     android:layout_height="wrap_content"	
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_private_event_sendAs_prompt"
+     android:layout_alignBaseline="@+id/activity_create_private_event_sendAs_prompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:textAppearance="?android:attr/textAppearanceSmall"     
+     android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true"
+	android:imeOptions="actionNext"
+	android:hint="@string/enterSenderName"/> 
+
+ 
+ <TextView
+     android:layout_marginTop="@dimen/twentyfivedp"
+     android:id="@+id/activity_create_private_event_sendToPrompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="@string/sendTo"
+     android:layout_alignRight="@+id/activity_create_private_event_sendAs_prompt"
+     android:layout_below="@+id/activity_create_private_event_private_sendAs_value"/>
+ <MultiAutoCompleteTextView  
+     android:id="@+id/activity_create_private_event_private_sendTo_value"
+     android:layout_height="wrap_content"	
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_private_event_sendToPrompt"
+     android:layout_alignBaseline="@+id/activity_create_private_event_sendToPrompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:textAppearance="?android:attr/textAppearanceSmall"     
+     android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true"
+	android:imeOptions="actionNext"
+	android:hint="@string/enterSendTo"
+	 android:layout_below="@+id/activity_create_private_event_private_sendAs_value"/>
+	
+ <TextView
+     android:id="@+id/activity_create_private_event_nameprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_below="@+id/activity_create_private_event_private_sendTo_value"
+     android:layout_marginTop="@dimen/fortydp"
+     android:layout_alignRight="@+id/activity_create_private_event_sendToPrompt"
+     android:text="@string/name"/>
+ <EditText
+     android:id="@+id/activity_create_private_event_namevalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_private_event_nameprompt"
+     android:layout_alignBaseline="@+id/activity_create_private_event_nameprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:textAppearance="?android:attr/textAppearanceSmall"     
+     android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true"
+	android:imeOptions="actionNext"
+	android:hint="@string/namehint"
+	 android:layout_below="@+id/activity_create_private_event_private_sendTo_value"/> 
+ 
+      <TextView
+        android:id="@+id/activity_create_private_event_dateFromPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/fiftydp"
+		android:layout_marginLeft="@dimen/tendp"
+		android:layout_below="@+id/activity_create_private_event_namevalue"/>
+
+ <EditText
+        android:id="@+id/activity_create_private_event_dateFromvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_toRightOf="@+id/activity_create_private_event_dateFromPrompt"
+        android:layout_alignBaseline="@+id/activity_create_private_event_dateFromPrompt"
+        android:layout_marginLeft="@dimen/fivedp"
+  		android:layout_below="@+id/activity_create_private_event_namevalue"
+  		android:textAppearance="?android:attr/textAppearanceSmall"
+  		android:padding="@dimen/fivedp"
+  		android:cursorVisible="false"
+  		android:focusableInTouchMode="false"
+  		android:inputType="none"
+  		android:hint="@string/datetimehint"/>     
+      
+ 
+<TextView
+        android:id="@+id/activity_create_private_event_dateToPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+		android:textColor="@color/black"
+		android:layout_toRightOf="@+id/activity_create_private_event_dateFromvalue"
+		android:layout_alignBaseline="@+id/activity_create_private_event_dateFromPrompt"
+		android:layout_marginLeft="@dimen/tendp"
+		android:layout_below="@+id/activity_create_private_event_namevalue"/>
+
+ <EditText
+        android:id="@+id/activity_create_private_event_dateTovalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_toRightOf="@+id/activity_create_private_event_dateToPrompt"
+        android:layout_alignBaseline="@+id/activity_create_private_event_dateToPrompt"
+		android:layout_below="@+id/activity_create_private_event_namevalue"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:padding="@dimen/fivedp"
+		android:cursorVisible="false"
+		android:focusableInTouchMode="false"
+		android:inputType="none"
+		android:hint="@string/datetimehint"/>     
+  <TextView
+     android:id="@+id/activity_create_private_event_categoryprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_private_event_nameprompt"
+     android:text="@string/category"
+     android:layout_below="@+id/activity_create_private_event_dateTovalue"
+     android:layout_marginTop="@dimen/seventydp"
+     android:paddingTop="@dimen/fivedp"
+     android:paddingBottom="@dimen/fivedp"/>
+ 
+   <Button
+        android:id="@+id/activity_create_private_event_categoryvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/activity_create_private_event_categoryprompt"
+        android:layout_marginLeft="@dimen/fivedp"
+        android:layout_below="@+id/activity_create_private_event_dateTovalue"
+        android:layout_alignTop="@+id/activity_create_private_event_categoryprompt"
+        android:layout_alignBottom="@+id/activity_create_private_event_categoryprompt"
+        android:background="@drawable/button_selector_colored"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:onClick="selectCategories" />
+ <TextView
+     android:id="@+id/activity_create_private_event_descriptionprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_alignRight="@+id/activity_create_private_event_categoryprompt"
+     android:text="@string/desc"
+     android:layout_below="@+id/activity_create_private_event_categoryvalue"
+     android:layout_marginTop="@dimen/thirtydp"/>
+ <EditText
+     android:id="@+id/activity_create_private_event_descriptionvalue"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_private_event_descriptionprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_private_event_categoryvalue"
+     android:layout_alignBaseline="@+id/activity_create_private_event_descriptionprompt"
+     android:hint="@string/deschint"
+     android:textAppearance="?android:attr/textAppearanceSmall" 
+	android:imeOptions="actionNext"/> 
+  <TextView
+     android:id="@+id/activity_create_private_event_addressprompt"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginLeft="@dimen/tendp"
+     android:layout_alignRight="@+id/activity_create_private_event_descriptionprompt"
+     android:text="@string/address"
+     android:layout_below="@+id/activity_create_private_event_descriptionvalue"
+     android:layout_marginTop="@dimen/fiftydp"/>
+ <EditText
+     android:id="@+id/activity_create_private_event_addressvalue"
+     android:layout_height="wrap_content"
+     
+     android:layout_width="fill_parent"
+     android:layout_toRightOf="@+id/activity_create_private_event_addressprompt"
+     android:layout_marginLeft="@dimen/fivedp"
+     android:layout_below="@+id/activity_create_private_event_descriptionvalue"
+     android:layout_alignBaseline="@+id/activity_create_private_event_addressprompt"
+     android:layout_marginBottom="@dimen/tendp"
+     android:hint="@string/addresshint"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:cursorVisible="false"
+		android:focusableInTouchMode="false"
+		android:inputType="none" />
+ 
+  <Button
+        android:id="@+id/activity_create_private_event_createbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/createAndSendInvites" 
+          android:textAppearance="?android:attr/textAppearanceSmall"
+        style="?android:attr/buttonBarButtonStyle" 
+        android:layout_below="@+id/activity_create_private_event_addressvalue"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/hundreddp"
+        android:onClick="createEvent"/>
+   
+ 
+</RelativeLayout>
+</ScrollView>

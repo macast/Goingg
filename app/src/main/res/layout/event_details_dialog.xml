@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+      
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/eventDets_titleLayout"
+        android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/eventDets_titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eventDets"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+     <RelativeLayout
+         android:id="@+id/event_details_dialog_titlebuttons"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="right">
+       <ImageButton
+        android:id="@+id/eventDets_shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/share" 
+        android:background="@drawable/button_selector_transparent"
+		android:layout_alignParentRight="true"
+		android:padding="@dimen/tendp"/>
+		
+       
+   		<ImageButton
+        android:id="@+id/eventDets_reminderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/bell" 
+        android:background="@drawable/button_selector_transparent"
+        android:layout_toLeftOf="@+id/eventDets_shareButton"
+      	android:padding="@dimen/tendp"/>
+	
+   		<ImageButton
+        android:id="@+id/eventDets_trashButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/deleteevent" 
+        android:background="@drawable/button_selector_transparent"
+        android:layout_toLeftOf="@+id/eventDets_reminderButton"
+      	android:padding="@dimen/tendp"
+      	android:visibility="invisible"/>
+   		
+   		<ImageButton
+        android:id="@+id/eventDets_spamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/spam" 
+        android:background="@drawable/button_selector_transparent"
+        android:layout_toLeftOf="@+id/eventDets_trashButton"
+      	android:padding="@dimen/tendp"
+      	android:visibility="gone"/>
+	
+   		
+      		   </RelativeLayout>
+ </LinearLayout>
+  		
+   		  <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+   		<LinearLayout 
+   		    android:id="@+id/eventDets_acklayouttitle"
+   		    android:layout_height="wrap_content"
+   		    android:layout_width="match_parent"
+   		    android:orientation="vertical">
+   		<LinearLayout 
+   		    android:id = "@+id/eventDets_acklayout"
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:padding="@dimen/tendp"
+   		    android:orientation="horizontal"
+   		   	style ="?android:attr/buttonBarStyle"
+   		   	android:gravity="center"
+   		   	android:layout_marginLeft="@dimen/fiftydp"
+   		   	android:visibility="gone">
+   		    
+   		    <Button
+   		        android:id="@+id/eventDets_yesbutton"
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+   		        android:drawableTop="@drawable/yes"
+   		        android:text="@string/app_name"
+   		        style="?android:attr/buttonBarButtonStyle"
+   		        android:background="@drawable/button_selector_group" 
+   		        android:textAppearance="?android:attr/textAppearanceSmall"/>
+   		    
+   		    <Button
+   		        android:id="@+id/eventDets_nobutton"
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+   		        android:drawableTop="@drawable/no"
+  	            android:textAppearance="?android:attr/textAppearanceSmall"
+   		        android:text="@string/nope"
+  				android:background="@drawable/button_selector_group"   		        
+   		        style="?android:attr/buttonBarButtonStyle" />
+   		    
+   		    <Button
+   		        android:id="@+id/eventDets_maybebutton"
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+   		        android:drawableTop="@drawable/maybe"
+          	    android:textAppearance="?android:attr/textAppearanceSmall"
+   		        android:text="@string/maybe"
+  				android:background="@drawable/button_selector_group"   		        
+   		        style="?android:attr/buttonBarButtonStyle" />
+   		         	   	
+   		</LinearLayout>
+   		<LinearLayout
+   		    android:id="@+id/eventDets_markedLayout"
+   		    android:layout_height="wrap_content"
+   		    android:layout_width="wrap_content"
+   		    android:orientation="horizontal"
+   		    android:layout_marginTop="@dimen/tendp"
+   		    android:layout_marginBottom="@dimen/tendp"
+   		    android:visibility="gone"
+   		    android:gravity="center"
+   		    android:layout_gravity="center"
+   		    android:background="@drawable/button_selector_group"
+   		    android:padding="@dimen/tendp">
+   		    <ImageView 
+   		        android:id="@+id/eventDets_markedImg"
+   		        android:layout_height="wrap_content"
+   		        android:layout_width= "wrap_content"/>
+   		    <TextView
+   		        android:id="@+id/eventDets_markedTextPrompt"
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+   		        android:layout_marginLeft="@dimen/tendp"
+   		        android:text="@string/markedeventprompt"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+   		    <TextView
+   		        android:id="@+id/eventDets_markedTextValue"
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+   		</LinearLayout>
+   		</LinearLayout>
+       <TextView
+        android:id="@+id/eventDets_nameprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/black"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:paddingLeft="@dimen/fortydp"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_below="@+id/eventDets_acklayouttitle"/>
+       
+         <TextView
+        android:id="@+id/eventDets_namedetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_toRightOf="@+id/eventDets_nameprompt"
+       	android:layout_alignTop="@+id/eventDets_nameprompt"      	   
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/fivedp"/>
+	    
+       <TextView
+        android:id="@+id/eventDets_descprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc"
+        android:textColor="@color/black"
+ 		android:layout_marginLeft="@dimen/fivedp"
+ 		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_namedetailsText"
+        android:layout_alignRight="@+id/eventDets_nameprompt"/>
+        
+        
+         <LinearLayout 
+           android:id="@+id/eventDets_descdetailsLayout"
+           android:layout_width="wrap_content"
+       	   android:layout_height="wrap_content"
+       	   android:layout_toRightOf="@+id/eventDets_descprompt"
+   		android:layout_marginLeft="@dimen/fivedp"
+       	   android:layout_marginTop="@dimen/tendp"
+	    	android:layout_alignBottom="@+id/eventDets_descprompt"
+	    	android:layout_below="@+id/eventDets_namedetailsText"
+	    	android:orientation="horizontal">
+  
+       <TextView
+        android:id="@+id/eventDets_descdetails"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_weight="9"
+		android:singleLine="true"/>
+       
+        <ImageButton
+        android:id="@+id/eventDets_moreDesc"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/expand"     
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+  
+        
+        </LinearLayout>
+        
+          <TextView
+        android:id="@+id/eventDets_categoryprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fivedp"
+        android:text="@string/category"
+  		android:layout_marginTop="@dimen/tendp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/eventDets_descprompt"
+        android:layout_alignRight="@+id/eventDets_descprompt"/>
+  
+
+             <LinearLayout 
+           android:id="@+id/eventDets_categorydetailsLayout"
+           android:layout_width="wrap_content"
+       	   android:layout_height="wrap_content"
+           android:layout_below="@+id/eventDets_descdetailsLayout"
+      	   android:layout_marginLeft="@dimen/fivedp"
+ 		   android:layout_marginTop="@dimen/tendp"   
+           android:layout_alignBottom="@+id/eventDets_categoryprompt"
+   			android:layout_toRightOf="@+id/eventDets_categoryprompt"
+	    	android:orientation="horizontal"     
+           >
+         <TextView
+        android:id="@+id/eventDets_categorydetails"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:textColor="@color/black"
+	    android:singleLine="true"/>
+        
+         <ImageButton
+        android:id="@+id/eventDets_moreCategoryDetails"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/more"     
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+         
+         <ImageButton
+        android:id="@+id/eventDets_lessCategoryDetails"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stop"     
+        android:background="@color/transparent"
+        android:layout_weight="1"
+        android:visibility="gone" />
+    
+         </LinearLayout>
+         
+       <TextView
+        android:id="@+id/eventDets_startsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/starts"
+        android:textColor="@color/black"
+ 		android:layout_marginTop="@dimen/tendp"
+ 		android:layout_marginLeft="@dimen/fivedp"
+ 		android:layout_below="@+id/eventDets_categoryprompt"
+        android:layout_alignRight="@+id/eventDets_categoryprompt"/>
+ 
+         <TextView
+        android:id="@+id/eventDets_startsdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/eventDets_startsprompt"
+    		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_categorydetailsLayout"
+		android:layout_toRightOf="@+id/eventDets_startsprompt"
+		android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:layout_marginLeft="@dimen/fivedp"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"/>
+                  
+         <TextView
+        android:id="@+id/eventDets_endsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fivedp"
+  		android:layout_marginTop="@dimen/tendp"
+        android:text="@string/ends"
+        android:textColor="@color/black"
+        android:layout_below="@+id/eventDets_startsprompt"
+        android:layout_alignRight="@+id/eventDets_startsprompt"/>
+ 
+         <TextView
+        android:id="@+id/eventDets_endsdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/eventDets_endsprompt"
+   		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_startsdetails"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_toRightOf="@+id/eventDets_endsprompt"
+		android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"/>
+                      
+        <TextView
+        android:id="@+id/eventDets_priceprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fivedp"
+  		android:layout_marginTop="@dimen/tendp"
+        android:text="@string/price"
+        android:textColor="@color/black"
+        android:layout_below="@+id/eventDets_endsprompt"
+        android:layout_alignRight="@+id/eventDets_endsprompt"/>
+ 
+         <TextView
+        android:id="@+id/eventDets_pricedetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/eventDets_priceprompt"
+   		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_endsdetails"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_toRightOf="@+id/eventDets_priceprompt"
+		android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"/>
+                      
+      
+       
+       <TextView
+        android:id="@+id/eventDets_infoprompt"
+        android:layout_width="wrap_content"
+   		android:layout_marginTop="@dimen/tendp"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+ 		android:layout_marginLeft="@dimen/fivedp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/eventDets_priceprompt"
+        android:layout_alignRight="@+id/eventDets_priceprompt"/>
+ 
+         <TextView
+        android:id="@+id/eventDets_infodetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+   		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_pricedetails"
+        android:layout_alignBaseline="@+id/eventDets_infoprompt"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_toRightOf="@+id/eventDets_infoprompt"
+		android:singleLine="true"
+		android:ellipsize="marquee" 
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true" 
+		android:focusable="true" 
+		android:focusableInTouchMode="true"/>
+                         
+            <TextView
+        android:id="@+id/eventDets_addressprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_below="@+id/eventDets_infodetails"
+		android:layout_marginTop="@dimen/tendp" 
+		android:layout_alignRight="@+id/eventDets_infoprompt"  />    
+    
+       <TextView
+        android:id="@+id/eventDets_addressdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+  		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_infodetails"
+        android:layout_marginLeft="@dimen/fivedp"
+    	android:layout_toRightOf="@+id/eventDets_addressprompt"/>
+       
+       <TextView
+        android:id="@+id/eventDets_sourceprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/source"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_below="@+id/eventDets_addressdetails"
+		android:layout_marginTop="@dimen/tendp" 
+		android:layout_alignRight="@+id/eventDets_addressprompt"  />    
+    
+       <TextView
+        android:id="@+id/eventDets_sourcedetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hololighttext"
+  		android:layout_marginTop="@dimen/tendp"
+        android:layout_below="@+id/eventDets_addressdetails"
+        android:layout_marginLeft="@dimen/fivedp"
+    	android:layout_toRightOf="@+id/eventDets_sourceprompt"/>
+   
+             </RelativeLayout>
+        </ScrollView>
+         <LinearLayout 
+           android:id="@+id/eventDets_numLayout"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:layout_marginTop="@dimen/thirtydp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:visibility="gone">
+           <TextView
+               android:id="@+id/eventDets_goingprompt"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:text="@string/goingcolon"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+           <TextView
+               android:id="@+id/eventDets_goingvalue"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:textColor="@color/mothgreen"
+               android:layout_marginLeft="@dimen/fivedp"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+               android:id="@+id/eventDets_nopeprompt"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:text="@string/nopecolon"
+               android:layout_marginLeft="@dimen/tendp"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+           <TextView
+               android:id="@+id/eventDets_nopevalue"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:textColor="@color/soylentred"
+               android:layout_marginLeft="@dimen/fivedp"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+               android:id="@+id/eventDets_maybeprompt"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:text="@string/maybecolon"
+               android:layout_marginLeft="@dimen/tendp"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+           <TextView
+               android:id="@+id/eventDets_maybevalue"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:textColor="@color/orange"
+               android:layout_marginLeft="@dimen/fivedp"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+    
+         <LinearLayout 
+         android:id="@+id/eventDets_buttonslayout"
+         android:layout_height="@dimen/zerodip"
+          android:layout_weight="@string/dialogButtonsWeight"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:layout_marginTop="@dimen/tendp">         
+        <ImageButton
+        android:id="@+id/eventDets_map"
+        android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@drawable/map" 
+        android:background="@drawable/button_selector_group"/>
+
+         <Button
+        android:id="@+id/eventDets_close"
+		android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/close" />
+         
+           <ImageButton
+        android:id="@+id/eventDets_weather"
+		android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@drawable/weather" 
+        android:background="@drawable/button_selector_group"/>
+         </LinearLayout>
+             
+</LinearLayout>
+ 
+

@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+      
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/login_titleLayout"
+        android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/login_titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"
+		android:text="@string/login"/>
+    
+ </LinearLayout>
+  		
+   		  <View 
+   		android:layout_width="fill_parent"
+   	android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>
+   
+   		  <ScrollView
+   		      android:id="@+id/login_scroll"
+   		      android:layout_width="fill_parent"
+   		      android:layout_height="@dimen/zerodip"
+   		      android:layout_weight="@string/dialogScrollWeight">
+       
+   		      <LinearLayout
+   		          android:id="@+id/login_linearcontent"
+   		          android:layout_width="fill_parent"
+   		          android:layout_height="wrap_content"
+   		          android:orientation="vertical">
+        
+	<EditText
+	        android:id="@+id/login_username"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/twentydp"
+	        android:hint="@string/username" 
+	       android:textAppearance="?android:attr/textAppearanceSmall"/>
+	    <EditText
+	        android:id="@+id/login_password"
+	        android:inputType="textPassword"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fontFamily="sans-serif"
+	        android:layout_marginTop="@dimen/tendp"
+	        android:hint="@string/password"
+	    	android:textAppearance="?android:attr/textAppearanceSmall"/>
+	
+	    <EditText
+	        android:id="@+id/login_confirmpwd"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/tendp"
+	       android:textAppearance="?android:attr/textAppearanceSmall"
+	       android:visibility="gone"
+	       android:hint="@string/confirmpwd"
+	        android:inputType="textPassword"/>
+	    <EditText
+	        android:id="@+id/login_email"
+	        android:inputType="textEmailAddress"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fontFamily="sans-serif"
+	        android:layout_marginTop="@dimen/tendp"
+	    	android:textAppearance="?android:attr/textAppearanceSmall"
+	    	android:visibility="gone"
+	    	android:hint="@string/entersecretword"/>
+	    
+	      <EditText
+	        android:id="@+id/login_fname"
+	        android:inputType="textPersonName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fontFamily="sans-serif"
+	        android:layout_marginTop="@dimen/tendp"
+	    	android:textAppearance="?android:attr/textAppearanceSmall"
+	    	android:visibility="gone"
+	    	android:hint="@string/enterfirstname"/>
+	    
+	      <EditText
+	        android:id="@+id/login_lname"
+	        android:inputType="textPersonName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fontFamily="sans-serif"
+	        android:layout_marginTop="@dimen/tendp"
+	    	android:textAppearance="?android:attr/textAppearanceSmall"
+	    	android:visibility="gone"
+	    	android:hint="@string/enterlastname"/>
+	      
+	        <EditText
+	        android:id="@+id/login_city"
+	        android:inputType="textPersonName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fontFamily="sans-serif"
+	        android:layout_marginTop="@dimen/tendp"
+	    	android:textAppearance="?android:attr/textAppearanceSmall"
+	    	android:visibility="gone"
+	    	android:hint="@string/entercity"/>
+	    
+	    
+	    
+	    
+	    <TextView
+	        android:id="@+id/login_seekprompt"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/tendp"
+	        android:layout_marginTop="@dimen/twentydp"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/dragbar"
+	        android:visibility="gone"
+	        android:textColor="@color/grey"/>
+	    
+	    <SeekBar
+	        android:id="@+id/login_seekbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/tendp"
+	        android:visibility="gone"
+	        android:max="10"/>
+	      <TextView
+	        android:id="@+id/login_seekedprompt"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/nowat"
+	        android:visibility="gone"
+	        android:textColor="@color/grey"
+	        android:layout_marginLeft="@dimen/onethirtydp"/>
+	      </LinearLayout>
+	      </ScrollView>
+          <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+       		 android:layout_weight="@string/dialogButtonsWeight"
+          	 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/login_dialog_buttons"
+       		 android:layout_marginTop="@dimen/twentydp">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/login_dialog_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/cancel"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+         <Button
+        android:id="@+id/login_dialog_register"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/register" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+   <Button
+        android:id="@+id/login_dialog_signin"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/login" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+         
+             </LinearLayout>
+         </LinearLayout>

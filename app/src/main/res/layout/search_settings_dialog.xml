@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:orientation="horizontal"
+        android:id="@+id/search_settings_title">
+        
+       <TextView
+        android:id="@+id/search_settings_titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_settings"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>"
+     </LinearLayout>
+       <View 
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext" />
+  
+    <ScrollView
+        android:layout_width="fill_parent"
+ 		android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogScrollWeight"
+        android:id="@+id/search_settings_scrollView" 
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_settings_relLayoutContent">
+    <TextView
+        android:id="@+id/search_settings_showPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show"
+		android:layout_marginLeft="@dimen/thirtydp"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/twentydp"
+		android:layout_marginRight="@dimen/fivedp"/>
+    
+        <RadioGroup
+        android:id="@+id/search_settings_showValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/search_settings_showPrompt"
+        android:layout_marginTop="@dimen/fifteendp"
+        android:orientation="horizontal" >
+ 
+        <RadioButton
+            android:id="@+id/search_settings_radioEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/events"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+ 
+        <RadioButton
+            android:id="@+id/search_settings_radioPlaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/places"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+        <RadioButton
+            android:id="@+id/search_settings_radioBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/both"
+            android:checked="true"
+       		android:textAppearance="?android:attr/textAppearanceSmall" /> 
+    </RadioGroup>
+    <TextView
+        android:id="@+id/search_settings_categoryPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/thirtydp"
+		android:layout_marginRight="@dimen/fivedp"
+		android:layout_alignRight="@+id/search_settings_showPrompt"
+		android:layout_below="@+id/search_settings_showPrompt"
+		android:paddingTop="@dimen/fivedp"
+		android:paddingBottom="@dimen/fivedp"/>
+		
+    
+  <Button
+        android:id="@+id/search_settings_categoryValue"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_colored"
+        android:layout_toRightOf="@+id/search_settings_categoryPrompt"
+        android:layout_alignTop="@+id/search_settings_categoryPrompt"
+        android:layout_alignBottom="@+id/search_settings_categoryPrompt"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_below="@+id/search_settings_showPrompt"
+		android:layout_marginRight="@dimen/tendp"/>
+          
+   
+<TextView
+        android:id="@+id/search_settings_dateFromPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/thirtydp"
+		android:layout_alignRight="@+id/search_settings_categoryPrompt"
+		android:layout_below="@+id/search_settings_categoryValue"/>
+
+ <EditText
+        android:id="@+id/search_settings_dateFromvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_marginTop="@dimen/thirtydp"
+        android:layout_toRightOf="@+id/search_settings_dateFromPrompt"
+        android:layout_alignBaseline="@+id/search_settings_dateFromPrompt"
+        android:layout_marginLeft="@dimen/fivedp"
+  		android:layout_below="@+id/search_settings_categoryValue"
+  		android:textAppearance="?android:attr/textAppearanceSmall"
+  		android:padding="@dimen/fivedp"
+  		android:cursorVisible="false"
+  		android:focusableInTouchMode="false"
+  		android:inputType="none"/>     
+ 
+<TextView
+        android:id="@+id/search_settings_dateToPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/thirtydp"
+		android:layout_toRightOf="@+id/search_settings_dateFromvalue"
+		android:layout_alignBaseline="@+id/search_settings_dateFromvalue"
+		android:layout_marginLeft="@dimen/tendp"
+		android:layout_below="@+id/search_settings_categoryValue"/>
+
+ <EditText
+        android:id="@+id/search_settings_dateTovalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:layout_marginTop="@dimen/thirtydp"
+        android:layout_toRightOf="@+id/search_settings_dateToPrompt"
+        android:layout_alignBaseline="@+id/search_settings_dateToPrompt"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_below="@+id/search_settings_categoryValue"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:padding="@dimen/fivedp"
+		android:cursorVisible="false"
+		android:focusableInTouchMode="false"
+		android:inputType="none"/>     
+ 
+    
+<TextView
+        android:id="@+id/search_settings_withinPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/within"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/twentydp"
+		android:layout_alignRight="@+id/search_settings_categoryPrompt"
+		android:layout_below="@+id/search_settings_dateTovalue"/>
+
+
+    <Spinner
+        android:id="@+id/search_settings_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twentydp"
+        android:layout_toRightOf="@+id/search_settings_withinPrompt"
+        android:layout_alignBaseline="@+id/search_settings_withinPrompt"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_below="@+id/search_settings_dateTovalue"
+		android:textColor="@color/black"/>      
+		
+     <TextView
+        android:id="@+id/search_settings_miPrompt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/miles"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/twentydp"
+		android:layout_marginLeft="@dimen/fivedp"
+		android:layout_below="@+id/search_settings_dateTovalue"
+		android:layout_toRightOf="@+id/search_settings_spinner"
+		android:layout_alignBottom="@+id/search_settings_spinner"/>
+    
+ <TextView
+        android:id="@+id/search_settings_fromLocPrompt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/from"
+		android:textColor="@color/black"
+		android:layout_marginTop="@dimen/tendp"
+		android:layout_alignRight="@+id/search_settings_withinPrompt"
+		android:layout_below="@+id/search_settings_spinner"/>
+
+ <EditText
+        android:id="@+id/search_settings_fromLocValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+		android:layout_toRightOf="@+id/search_settings_fromLocPrompt"
+		android:layout_alignBaseline="@+id/search_settings_fromLocPrompt"
+		android:layout_marginLeft="@dimen/fivedp"
+        android:layout_marginTop="@dimen/tendp"
+		android:hint="@string/fromAddHint"
+		android:layout_below="@+id/search_settings_spinner"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:cursorVisible="false"
+		android:padding="@dimen/fivedp"
+		android:focusableInTouchMode="false"
+		android:inputType="none"/>
+		
+ 
+   </RelativeLayout>
+    </ScrollView>
+      
+      <LinearLayout
+             android:layout_width="fill_parent"
+			 android:layout_height="@dimen/zerodip"
+       		 android:layout_weight="@string/dialogButtonsWeight"
+          	 android:orientation="horizontal"
+       		 style="?android:attr/buttonBarStyle"
+       		 android:id="@+id/search_settings_dialog_buttons">
+          
+         <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/search_settings_cancel"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/cancel"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+         <Button
+        android:id="@+id/search_settings_search"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/search" 
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+        </LinearLayout>
+</LinearLayout>

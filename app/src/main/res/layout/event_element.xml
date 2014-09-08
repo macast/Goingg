@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="@dimen/tendp"
+    android:background="@drawable/button_selector_transparent">
+      <TextView 
+        android:id="@+id/event_element_eventname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/tendp"
+        android:textColor="@color/red"/>
+    
+      <LinearLayout
+          android:id="@+id/event_element_linearlayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginTop="@dimen/tendp">
+           <ImageView
+        android:id="@+id/event_element_img"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:background="@color/transparent"/> 
+     
+       <RelativeLayout
+        android:id="@+id/event_element_eventdetailslayout"
+        android:layout_width="@dimen/zerodip"
+        android:layout_height="wrap_content"
+        android:layout_weight="7">
+          <TextView
+        android:id="@+id/event_element_startsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/twentydp"
+        android:text="@string/starts"/>
+    <TextView
+        android:id="@+id/event_element_startsvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/event_element_startsprompt"
+        android:layout_alignBaseline="@+id/event_element_startsprompt"
+        android:layout_marginLeft="@dimen/fivedp"/>
+     <RatingBar
+        android:id="@+id/event_element_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:visibility="gone" 
+        android:layout_toRightOf="@+id/event_element_startsprompt"
+        android:layout_alignBottom="@+id/event_element_startsprompt"
+        android:layout_marginLeft="@dimen/fivedp"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="true"/>
+    
+    <TextView
+        android:id="@+id/event_element_endsprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_element_startsvalue"
+        android:layout_alignRight="@+id/event_element_startsprompt"
+        android:text="@string/ends"/>
+    <TextView
+        android:id="@+id/event_element_endsvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fivedp"        
+        android:layout_below="@+id/event_element_startsvalue"
+        android:layout_toRightOf="@+id/event_element_endsprompt"
+        android:layout_alignBaseline="@+id/event_element_endsprompt"/>
+      <TextView
+        android:id="@+id/event_element_distanceprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_element_endsvalue"
+        android:layout_alignRight="@+id/event_element_endsprompt"
+        android:text="@string/distance"/>
+    <TextView
+        android:id="@+id/event_element_distancevalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_element_endsvalue"
+		android:layout_marginLeft="@dimen/fivedp"
+        android:layout_toRightOf="@+id/event_element_distanceprompt"
+        android:layout_alignBaseline="@+id/event_element_distanceprompt"/>
+ 
+    <TextView
+        android:id="@+id/event_element_categoryprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_element_distancevalue"
+        android:layout_alignRight="@+id/event_element_distanceprompt"
+        android:text="@string/category"/>
+    <TextView
+        android:id="@+id/event_element_categoryvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_element_distancevalue"
+		android:layout_marginLeft="@dimen/fivedp"
+        android:layout_toRightOf="@+id/event_element_categoryprompt"
+        android:layout_alignBaseline="@+id/event_element_categoryprompt"
+        android:layout_marginBottom="@dimen/tendp"/>
+        
+
+</RelativeLayout>
+
+
+</LinearLayout>
+</LinearLayout>

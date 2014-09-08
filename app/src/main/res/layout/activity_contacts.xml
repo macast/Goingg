@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_contacts_parentlayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/listview_bkgrnd"  >
+    
+    <Button 
+        android:id="@+id/activity_contacts_addnew"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/addnew"
+        android:layout_marginTop="@dimen/tendp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/tendp"
+        android:background="@drawable/button_selector_group"
+        android:padding="@dimen/tendp"
+		android:textAppearance="?android:attr/textAppearanceSmall"/>
+    
+       <ListView
+        android:id="@+id/activity_contacts_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_bkgrnd"
+        android:dividerHeight="@dimen/onedp"
+        android:divider="@color/lightestGrey"
+        android:layout_below="@+id/activity_contacts_addnew"
+        android:layout_marginTop="@dimen/tendp"
+        android:padding="@dimen/twentydp"
+        android:clipToPadding="false"
+    	android:scrollbarStyle="outsideOverlay">
+    </ListView>
+    
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+      
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogTitleWeight"
+        android:id="@+id/event_query_titleLayout"
+        android:orientation="horizontal">
+        
+       <TextView
+        android:id="@+id/eventQuery_titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/hololighttext"
+		android:paddingTop="@dimen/fifteendp"
+		android:paddingBottom="@dimen/fifteendp"
+		android:paddingLeft="@dimen/tendp"/>
+     <RelativeLayout
+         android:id="@+id/event_details_dialog_titlebuttons"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="right">
+       <ImageButton
+        android:id="@+id/eventquery_sharebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/share" 
+        android:background="@drawable/button_selector_transparent"
+		android:layout_alignParentRight="true"
+		android:paddingLeft="@dimen/fivedp"
+		android:paddingRight="@dimen/fivedp"
+		android:layout_marginLeft="@dimen/onedp"
+		android:layout_marginBottom="@dimen/onedp"
+		android:padding="@dimen/tendp"/>
+		
+       
+   		<ImageButton
+        android:id="@+id/eventquery_reminderbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/bell" 
+        android:background="@drawable/button_selector_transparent"
+        android:layout_toLeftOf="@+id/eventquery_sharebutton"
+        android:paddingLeft="@dimen/fivedp"
+		android:paddingRight="@dimen/fivedp"
+		android:layout_marginBottom="@dimen/onedp"/>
+	
+      		   </RelativeLayout>
+ </LinearLayout>
+  		
+   		  <View 
+   		android:layout_width="fill_parent"
+   	android:layout_height="@dimen/twodp"       
+   		android:background="@color/hololighttext"/>
+        
+<WebView 
+    android:id="@+id/event_query_webview"
+    android:layout_width="wrap_content"
+   android:layout_height="@dimen/zerodip"
+    android:layout_weight="@string/dialogScrollWeight"
+/>
+
+ <LinearLayout 
+         android:id="@+id/eventDets_buttonslayout"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:layout_marginTop="@dimen/thirtydp"
+		  android:layout_height="@dimen/zerodip"
+        android:layout_weight="@string/dialogButtonsWeight"
+		>
+         
+        <ImageButton
+        android:id="@+id/eventQuery_map"
+        android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@drawable/map" 
+        android:background="@drawable/button_selector_group"/>
+
+         <Button
+        android:id="@+id/eventQuery_close"
+		android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="match_parent"
+        android:textColor="@color/black"      
+        android:background="@drawable/button_selector_group"
+        android:text="@string/close" />
+         
+           <ImageButton
+        android:id="@+id/eventQuery_weather"
+		android:layout_width="@dimen/zerodip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@drawable/weather" 
+        android:background="@drawable/button_selector_group"/>
+    </LinearLayout>
+    </LinearLayout>
+    
